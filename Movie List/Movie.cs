@@ -6,7 +6,7 @@ namespace Movie_List
 {
     class Movie
     {
-        public static List<MovieSelection> MovieList = new List<MovieSelection>
+        private static List<MovieSelection> MovieList = new List<MovieSelection>
         {
             new MovieSelection("Incredibles", "animated"),
             new MovieSelection("Her", "drama"),
@@ -25,7 +25,7 @@ namespace Movie_List
         {
             foreach (MovieSelection m in MovieList)
             {
-                if(genreGiven == m.Category)
+                if(genreGiven.ToLower() == m.Category)
                 {
                     Console.WriteLine(m.Title);
                 }
